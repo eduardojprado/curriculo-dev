@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { TaskContextProvider } from "./context/TaskContext";
+import ListaDeTarefas from "./components/ListaDeTarefas";
+import AdicionarTarefa from "./components/AdicionarTarefa";
+import Filtros from "./components/Filtros";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TaskContextProvider>
+      <div className="App">
+        <Header />
+        <h1>Gerenciador de Tarefas</h1>
+        <AdicionarTarefa />
+        <p></p>
+        <Filtros />
+        <p></p>
+        <ListaDeTarefas />
+        <p></p>
+        <Footer />
+      </div>
+    </TaskContextProvider>
   );
-}
+};
 
 export default App;

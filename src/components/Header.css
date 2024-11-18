@@ -1,0 +1,15 @@
+#cabecalho {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#cabecalho p {
+  margin: 0;
+}
+
+#cabecalho hr {
+  margin: 10px 0;
+}
