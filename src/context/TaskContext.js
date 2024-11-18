@@ -21,7 +21,13 @@ const taskReducer = (state, action) => {
 };
 
 const TaskContextProvider = ({ children }) => {
-  const initialTasks = [{ id: 1, text: "Tarefa inicial", completed: false }];
+  const initialTasks = [
+    {
+      id: 1,
+      text: "Tarefa inicial - visível sempre que iniciar o projeto.",
+      completed: false,
+    },
+  ];
 
   const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
   const [filter, setFilter] = useState("all");
